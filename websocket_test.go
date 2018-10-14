@@ -8,11 +8,11 @@ import (
 	"testing"
 	"testing/iotest"
 
-	insecure "github.com/libp2p/go-conn-security/insecure"
-	tptu "github.com/libp2p/go-libp2p-transport-upgrader"
-	utils "github.com/libp2p/go-libp2p-transport/test"
-	ma "github.com/multiformats/go-multiaddr"
-	mplex "github.com/whyrusleeping/go-smux-multiplex"
+	insecure "github.com/dms3-p2p/go-conn-security/insecure"
+	tptu "github.com/dms3-p2p/go-p2p-transport-upgrader"
+	utils "github.com/dms3-p2p/go-p2p-transport/test"
+	ma "github.com/dms3-mft/go-multiaddr"
+	mplex "github.com/dms3-why/go-smux-multiplex"
 )
 
 func TestCanDial(t *testing.T) {

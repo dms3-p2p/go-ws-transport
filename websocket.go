@@ -1,4 +1,4 @@
-// Package websocket implements a websocket based transport for go-libp2p.
+// Package websocket implements a websocket based transport for go-dms3-p2p.
 package websocket
 
 import (
@@ -9,12 +9,13 @@ import (
 	"net/url"
 
 	ws "github.com/gorilla/websocket"
-	peer "github.com/libp2p/go-libp2p-peer"
-	tpt "github.com/libp2p/go-libp2p-transport"
-	tptu "github.com/libp2p/go-libp2p-transport-upgrader"
-	ma "github.com/multiformats/go-multiaddr"
-	manet "github.com/multiformats/go-multiaddr-net"
-	mafmt "github.com/whyrusleeping/mafmt"
+	peer "github.com/dms3-p2p/go-p2p-peer"
+	tpt "github.com/dms3-p2p/go-p2p-transport"
+	tptu "github.com/dms3-p2p/go-p2p-transport-upgrader"
+	ma "github.com/dms3-mft/go-multiaddr"
+	manet "github.com/dms3-mft/go-multiaddr-net"
+//	mafmt "github.com/whyrusleeping/mafmt" // imports from multiformats, use ours
+	mafmt "github.com/dms3-why/mafmt"
 )
 
 // WsProtocol is the multiaddr protocol definition for this transport.
@@ -52,7 +53,7 @@ func init() {
 	manet.RegisterNetCodec(WsCodec)
 }
 
-// WebsocketTransport is the actual go-libp2p transport
+// WebsocketTransport is the actual go-dms3-p2p transport
 type WebsocketTransport struct {
 	Upgrader *tptu.Upgrader
 }

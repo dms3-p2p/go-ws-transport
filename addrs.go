@@ -5,8 +5,8 @@ import (
 	"net"
 	"net/url"
 
-	ma "github.com/multiformats/go-multiaddr"
-	manet "github.com/multiformats/go-multiaddr-net"
+	ma "github.com/dms3-mft/go-multiaddr"
+	manet "github.com/dms3-mft/go-multiaddr-net"
 )
 
 // Addr is an implementation of net.Addr for WebSocket.
